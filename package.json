@@ -1,0 +1,9 @@
+{
+  "name": "glass-box-demo",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A small sample site that AI agents change, recorded by Glass Box",
+  "scripts": {
+    "build": "node build.js"
+  }
+}
