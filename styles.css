@@ -34,30 +34,35 @@ body {
 }
 
 .hero {
-  max-width: 720px;
+  max-width: 960px;
   margin: 0 auto;
-  padding: 56px 32px 72px;
+  padding: 40px 32px 72px;
 }
+
+.hero-text { min-width: 0; }
 
 .kicker {
   color: var(--muted);
   font-size: 0.85rem;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  margin: 0 0 12px;
+  margin: 0 0 8px;
 }
 
-.hero h1 { font-size: 3rem; margin: 0 0 18px; }
+.hero h1 { font-size: 2.25rem; margin: 0 0 12px; }
 
-.blurb { font-size: 1.05rem; color: var(--muted); margin: 0 0 28px; }
+.blurb { font-size: 1.05rem; color: var(--muted); margin: 0 0 20px; }
 
-.hero-art { margin: 0 0 28px; }
+.hero-art { margin: 28px 0 0; }
 
 .hero-art img {
   width: 100%;
+  max-width: 480px;
+  height: auto;
   border: 1px solid var(--line);
   border-radius: 6px;
   display: block;
+  margin: 0 auto;
 }
 
 .hero-art figcaption {
@@ -74,6 +79,27 @@ body {
   padding: 12px 22px;
   border-radius: 4px;
   font-weight: 600;
+}
+
+@media (min-width: 900px) {
+  .hero {
+    display: flex;
+    align-items: center;
+    gap: 48px;
+  }
+
+  .hero-text {
+    flex: 1 1 auto;
+  }
+
+  .hero-art {
+    flex: 0 1 420px;
+    margin: 0;
+  }
+
+  .hero-art img {
+    margin: 0;
+  }
 }
 
 section#features {
